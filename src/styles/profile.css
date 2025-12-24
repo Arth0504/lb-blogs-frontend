@@ -1,0 +1,302 @@
+/* ================= PROFILE PAGE ================= */
+.profile-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  padding: 50px 15px;
+}
+
+/* ================= PROFILE CARD ================= */
+.profile-card {
+  background: #ffffff;
+  max-width: 900px;
+  margin: auto;
+  padding: 28px 32px;
+  border-radius: 18px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+}
+
+/* ================= HEADER ================= */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+/* ================= AVATAR ================= */
+.profile-avatar {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff5f6d, #ff9966);
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* ================= PROFILE INFO ================= */
+.profile-info h2 {
+  margin-bottom: 4px;
+  font-size: 1.6rem;
+  color: #222;
+}
+
+.profile-info p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ================= FILE UPLOAD ================= */
+.profile-info form {
+  margin-top: 10px;
+}
+
+.file-upload {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.file-upload input[type="file"] {
+  display: none;
+}
+
+.file-upload label {
+  padding: 6px 16px;
+  background: linear-gradient(135deg, #ff5f6d, #ff9966);
+  color: #fff;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.file-upload label:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.file-name {
+  font-size: 0.8rem;
+  color: #555;
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ================= BUTTON ================= */
+.profile-info button {
+  padding: 7px 18px;
+  border-radius: 22px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.profile-info button:hover {
+  background: #000;
+  transform: translateY(-1px);
+}
+
+/* ================= BLOG GRID ================= */
+.myblogs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+/* ================= BLOG CARD ================= */
+.myblog-card {
+  background: #f8f9fb;
+  padding: 18px;
+  border-radius: 14px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.myblog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+}
+
+.myblog-card h4 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #222;
+}
+
+.myblog-card p {
+  color: #555;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+/* ================= BLOG ACTIONS ================= */
+.blog-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.blog-actions a,
+.blog-actions button {
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  border-radius: 18px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.blog-actions a {
+  background: #ff6666;
+  color: #fff;
+}
+
+.blog-actions a:hover {
+  background: #ff4d4d;
+}
+
+.blog-actions button {
+  background: #333;
+  color: #fff;
+  border: none;
+}
+
+.blog-actions button:hover {
+  background: #111;
+}
+
+/* ================= EMPTY TEXT ================= */
+.profile-card > p {
+  margin-top: 20px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .profile-wrapper {
+    padding: 40px 12px;
+  }
+
+  .profile-card {
+    padding: 24px 22px;
+    border-radius: 16px;
+  }
+
+  .profile-header {
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+
+  .profile-avatar {
+    width: 70px;
+    height: 70px;
+    font-size: 1.6rem;
+  }
+
+  .profile-info h2 {
+    font-size: 1.45rem;
+  }
+
+  .profile-info p {
+    font-size: 0.85rem;
+  }
+
+  .file-name {
+    max-width: 150px;
+  }
+
+  .myblogs-grid {
+    gap: 18px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .profile-wrapper {
+    padding: 30px 10px;
+  }
+
+  .profile-card {
+    padding: 20px 18px;
+    border-radius: 14px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .profile-avatar {
+    width: 64px;
+    height: 64px;
+    font-size: 1.4rem;
+  }
+
+  .profile-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .profile-info p {
+    font-size: 0.8rem;
+  }
+
+  .file-upload {
+    gap: 8px;
+  }
+
+  .file-upload label {
+    font-size: 0.75rem;
+    padding: 5px 14px;
+  }
+
+  .profile-info button {
+    font-size: 0.75rem;
+    padding: 6px 14px;
+  }
+
+  .myblogs-grid {
+    gap: 16px;
+  }
+
+  .myblog-card {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .myblog-card h4 {
+    font-size: 0.95rem;
+  }
+
+  .myblog-card p {
+    font-size: 0.82rem;
+  }
+
+  .blog-actions {
+    gap: 8px;
+  }
+
+  .blog-actions a,
+  .blog-actions button {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+}

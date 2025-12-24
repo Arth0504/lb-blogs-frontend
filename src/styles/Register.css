@@ -1,0 +1,187 @@
+/* ================= REGISTER PAGE ================= */
+.register-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+/* ================= REGISTER BOX ================= */
+.register-box {
+  background: #fff;
+  padding: 35px 30px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  animation: slideUp 0.6s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= TITLE ================= */
+.register-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* ================= LABELS ================= */
+.register-box label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #555;
+}
+
+/* ================= INPUTS ================= */
+.register-box input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.register-box input:focus {
+  outline: none;
+  border-color: #ff758c;
+  box-shadow: 0 0 0 2px rgba(255,117,140,0.25);
+}
+
+/* ================= FILE UPLOAD ================= */
+.file-upload {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.file-upload input[type="file"] {
+  display: none;
+}
+
+.file-upload label {
+  padding: 6px 16px;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: #fff;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.file-upload label:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.file-name {
+  font-size: 0.8rem;
+  color: #555;
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ================= BUTTON ================= */
+.register-box button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.register-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .register-wrapper {
+    padding: 30px 12px;
+  }
+
+  .register-box {
+    padding: 28px 22px;
+    border-radius: 12px;
+  }
+
+  .register-box h2 {
+    font-size: 1.6rem;
+    margin-bottom: 22px;
+  }
+
+  .register-box input {
+    font-size: 0.9rem;
+    padding: 11px 13px;
+  }
+
+  .register-box button {
+    font-size: 0.95rem;
+    padding: 11px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .register-wrapper {
+    padding: 20px 10px;
+  }
+
+  .register-box {
+    padding: 22px 18px;
+    border-radius: 10px;
+  }
+
+  .register-box h2 {
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+  }
+
+  .register-box label {
+    font-size: 0.8rem;
+  }
+
+  .register-box input {
+    font-size: 0.85rem;
+    padding: 10px 12px;
+  }
+
+  .file-upload label {
+    font-size: 0.75rem;
+    padding: 5px 14px;
+  }
+
+  .register-box button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

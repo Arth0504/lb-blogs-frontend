@@ -1,0 +1,148 @@
+/* ===== EDIT BLOG PAGE ===== */
+.edit-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+}
+
+/* ===== EDIT BLOG BOX ===== */
+.edit-box {
+  background: #fff;
+  padding: 35px 30px;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  animation: slideUp 0.6s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== TITLE ===== */
+.edit-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* ===== INPUTS ===== */
+.edit-box input,
+.edit-box textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.edit-box textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.edit-box input:focus,
+.edit-box textarea:focus {
+  outline: none;
+  border-color: #f7971e;
+  box-shadow: 0 0 0 2px rgba(247,151,30,0.25);
+}
+
+/* ===== FILE INPUT ===== */
+.edit-box input[type="file"] {
+  border: none;
+  padding: 0;
+}
+
+/* ===== BUTTON ===== */
+.edit-box button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.edit-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+/* ================= RESPONSIVE ================= */
+
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  .edit-wrapper {
+    padding: 30px 15px;
+  }
+
+  .edit-box {
+    padding: 28px 22px;
+    border-radius: 12px;
+  }
+
+  .edit-box h2 {
+    font-size: 1.6rem;
+    margin-bottom: 22px;
+  }
+
+  .edit-box input,
+  .edit-box textarea {
+    font-size: 0.9rem;
+    padding: 11px 13px;
+  }
+
+  .edit-box textarea {
+    min-height: 130px;
+  }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .edit-wrapper {
+    padding: 20px 10px;
+  }
+
+  .edit-box {
+    padding: 22px 18px;
+    border-radius: 10px;
+  }
+
+  .edit-box h2 {
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+  }
+
+  .edit-box input,
+  .edit-box textarea {
+    font-size: 0.85rem;
+    padding: 10px 12px;
+  }
+
+  .edit-box textarea {
+    min-height: 120px;
+  }
+
+  .edit-box button {
+    font-size: 0.9rem;
+    padding: 11px;
+  }
+}
+
