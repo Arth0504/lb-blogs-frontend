@@ -9,6 +9,7 @@ export default function EditBlog() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [image, setImage] = useState(null);
+// netlify-fix
 
   useEffect(() => {
     api.get(`/blogs/${id}`).then((res) => {

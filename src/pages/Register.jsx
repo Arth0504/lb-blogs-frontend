@@ -2,6 +2,7 @@ import { useState } from "react";
 import api from "../api/axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/register.css";
+// netlify-fix
 
 export default function Register() {
   const [name, setName] = useState("");
